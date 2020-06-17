@@ -1,6 +1,5 @@
 package unrn.oo2.parcial2.model;
 
-import java.util.HashMap;
 import java.util.Optional;
 
 /**
@@ -11,18 +10,19 @@ import java.util.Optional;
  */
 public class FabricaFigurasOptional {
 
-	private HashMap<TipoFigura, Figura> templateFigura = new HashMap<>();
-
 	public FabricaFigurasOptional() {
-		this.templateFigura.put(TipoFigura.RECTANGULO, new Rectangulo(2,3));
-		this.templateFigura.put(TipoFigura.TRIANGULO, new Triangulo(3, 3, 3));
-		
-		// No es necesario devolver un Objeto Nulo. 
-		this.templateFigura.put(TipoFigura.NULA, null);
 	}
 	
 	public Optional<Figura> crear(TipoFigura figura) {
-		return Optional.ofNullable(this.templateFigura.get(figura));
+		//return Optional.ofNullable(this.templateFigura.get(figura));
+		switch (figura) {
+			case RECTANGULO:
+				return Optional.of(new Rectangulo(2,3));
+			case TRIANGULO:
+				return Optional.of(new Triangulo(3, 3, 3));
+			default:
+				return Optional.empty();
+		}
 	}
 	
 }
