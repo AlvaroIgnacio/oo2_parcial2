@@ -14,7 +14,7 @@ import unrn.oo2.parcial2.model.TipoFigura;
  * @author Alvaro Bayon
  *
  */
-public class Ejemplo2 {
+public class EjemploNullObject {
 
 	public static void main(String[] args) {
 
