@@ -1,7 +1,13 @@
 package unrn.oo2.parcial2.model;
 
+/**
+ * Objeto Nulo
+ * 
+ * @author Alvaro Bayon
+ *
+ */
 public class FiguraNula implements Figura {
-
+	
 	@Override
 	public double perimetro() {
 		return 0;

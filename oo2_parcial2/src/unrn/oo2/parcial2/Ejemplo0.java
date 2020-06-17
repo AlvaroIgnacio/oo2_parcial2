@@ -1,24 +1,30 @@
 package unrn.oo2.parcial2;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import unrn.oo2.parcial2.model.FabricaFiguras;
-import unrn.oo2.parcial2.model.Figura;
 import unrn.oo2.parcial2.model.TipoFigura;
 
+/**
+ * Listas vacias como Objetos Nulos
+ * 
+ * @author Alvaro Bayon
+ *
+ */
 public class Ejemplo0 {
 
 	public static void main(String[] args) {
 
-		FabricaFiguras fabrica = new FabricaFiguras();
-
 		List<TipoFigura> tiposFigura = Collections.emptyList();
+		List<TipoFigura> otros = new ArrayList<>();
 		
+		//Union de listas vacias
+		tiposFigura.addAll(otros);
+		
+		// Recorrido sobre una lista vacia
 		for (TipoFigura tipoFigura : tiposFigura) {
-			Figura figura = fabrica.crear(tipoFigura);
-			figura.dibujar();
-			System.out.println();
+			System.out.println(tipoFigura.toString());
 		}
 		
 	}

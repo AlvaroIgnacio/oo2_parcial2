@@ -7,6 +7,13 @@ import unrn.oo2.parcial2.model.FabricaFiguras;
 import unrn.oo2.parcial2.model.Figura;
 import unrn.oo2.parcial2.model.TipoFigura;
 
+/**
+ * Recorrido normal de una lista chequeando por null
+ * No se aplica el patron Null Object
+ * 
+ * @author Alvaro Bayon
+ *
+ */
 public class Ejemplo1 {
 
 	public static void main(String[] args) {

@@ -7,6 +7,13 @@ import unrn.oo2.parcial2.model.FabricaFiguras;
 import unrn.oo2.parcial2.model.Figura;
 import unrn.oo2.parcial2.model.TipoFigura;
 
+/**
+ * Recorrido de una lista con Null Object
+ * Tratamiento uniforme de los elementos
+ * 
+ * @author Alvaro Bayon
+ *
+ */
 public class Ejemplo2 {
 
 	public static void main(String[] args) {
