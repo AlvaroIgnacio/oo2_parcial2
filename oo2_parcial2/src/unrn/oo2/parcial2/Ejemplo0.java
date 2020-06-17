@@ -22,6 +22,8 @@ public class Ejemplo0 {
 		//Union de listas vacias
 		tiposFigura.addAll(otros);
 		
+		System.out.println(tiposFigura.size());
+		
 		// Recorrido sobre una lista vacia
 		for (TipoFigura tipoFigura : tiposFigura) {
 			System.out.println(tipoFigura.toString());
