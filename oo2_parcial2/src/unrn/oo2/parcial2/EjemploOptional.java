@@ -20,7 +20,7 @@ public class EjemploOptional {
 
 		FabricaFigurasOptional fabrica = new FabricaFigurasOptional();
 
-		List<TipoFigura> tiposFigura = Arrays.asList(TipoFigura.RECTANGULO, TipoFigura.TRIANGULO, null);
+		List<TipoFigura> tiposFigura = Arrays.asList(TipoFigura.RECTANGULO, TipoFigura.TRIANGULO, TipoFigura.NULA);
 		
 		// Uso de isPresent() - get()
 		for (TipoFigura tipoFigura : tiposFigura) {
