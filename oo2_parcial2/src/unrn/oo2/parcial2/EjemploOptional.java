@@ -24,20 +24,22 @@ public class EjemploOptional {
 		
 		// Uso de isPresent() - get()
 		for (TipoFigura tipoFigura : tiposFigura) {
-			Optional<Figura> figura = fabrica.crear(tipoFigura);
+			Optional<Figura> optionalFigura = fabrica.crear(tipoFigura);
 
-			if (figura.isPresent())
-				figura.get().dibujar();
+			if (optionalFigura.isPresent()) {
+				Figura figura = optionalFigura.get();
+				figura.dibujar();				
+			}
 		}
 		
 		System.out.println();
 
 		// Uso de ifPresent()
 		for (TipoFigura tipoFigura : tiposFigura) {
-			Optional<Figura> figura = fabrica.crear(tipoFigura);
+			Optional<Figura> optionalFigura = fabrica.crear(tipoFigura);
 
-			figura.ifPresent( unaFigura -> {	
-				unaFigura.dibujar();
+			optionalFigura.ifPresent( figura -> {	
+				figura.dibujar();
 				System.out.println();
 			});
 		}
