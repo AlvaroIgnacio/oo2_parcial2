@@ -3,9 +3,9 @@ package unrn.oo2.parcial2;
 import java.util.Arrays;
 import java.util.List;
 
-import unrn.oo2.parcial2.model.FabricaFiguras;
 import unrn.oo2.parcial2.model.Figura;
-import unrn.oo2.parcial2.model.TipoFigura;
+import unrn.oo2.parcial2.model.Rectangulo;
+import unrn.oo2.parcial2.model.Triangulo;
 
 /**
  * Recorrido normal de una lista chequeando por null
@@ -18,13 +18,9 @@ public class Ejemplo1 {
 
 	public static void main(String[] args) {
 
-		FabricaFiguras fabrica = new FabricaFiguras();
-
-		List<TipoFigura> tiposFigura = Arrays.asList(TipoFigura.RECTANGULO, TipoFigura.TRIANGULO, null);
+		List<Figura> figuras = Arrays.asList(new Rectangulo(2,3), new Triangulo(3, 3, 3), null);
 		
-		for (TipoFigura tipoFigura : tiposFigura) {
-			Figura figura = fabrica.crear(tipoFigura);
-
+		for (Figura figura : figuras) {
 			// Si no chequeo por null -> NullPointerException
 			if (figura!= null)
 				figura.dibujar();
