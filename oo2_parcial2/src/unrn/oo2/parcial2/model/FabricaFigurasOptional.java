@@ -14,7 +14,6 @@ public class FabricaFigurasOptional {
 	}
 	
 	public Optional<Figura> crear(TipoFigura figura) {
-		//return Optional.ofNullable(this.templateFigura.get(figura));
 		switch (figura) {
 			case RECTANGULO:
 				return Optional.of(new Rectangulo(2,3));
